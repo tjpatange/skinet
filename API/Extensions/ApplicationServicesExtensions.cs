@@ -12,8 +12,9 @@ namespace API.Extensions
         public static IServiceCollection AddAplicationServies(this IServiceCollection services)
         {
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+            services.AddScoped<IBasketRepository, BasketRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
-
+            
             // always add swagger before services.AddController();
             services.Configure<ApiBehaviorOptions>(options =>
             {
