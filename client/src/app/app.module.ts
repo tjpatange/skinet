@@ -1,3 +1,4 @@
+import { JwtInterceptor } from './core/interceptor/jwt.interceptor';
 import { LoadingInterceptor } from './core/interceptor/loading.interceptors';
 import { ErrorInterceptor } from './core/interceptor/error.interceptor';
 import { CoreModule } from './core/core.module';
@@ -25,7 +26,8 @@ import { NgxSpinnerModule } from 'ngx-spinner';
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true},
-    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true}
+    {provide: HTTP_INTERCEPTORS, useClass: LoadingInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

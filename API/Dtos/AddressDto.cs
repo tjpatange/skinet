@@ -22,7 +22,7 @@ namespace API.Dtos
         [Required]
         public string Zipcode { get; set; }
 
-        [Required]
+        // [Required]
         public string Country { get; set; }
     }
 }
