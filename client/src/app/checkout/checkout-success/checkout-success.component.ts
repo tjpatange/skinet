@@ -1,4 +1,3 @@
-import { stat } from 'fs';
 import { IOrder } from './../../shared/models/order';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
@@ -16,9 +15,10 @@ export class CheckoutSuccessComponent implements OnInit {
     const state = navigation && navigation.extras && navigation.extras.state;
     if (state) {
       this.order = state as IOrder;
+    } else {
+      this.order = null;
     }
   }
-
   ngOnInit(): void {
   }
 
