@@ -1,5 +1,21 @@
 .list-group {
     li {
         cursor: pointer;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.1em;    
+
+        &:focus {
+            outline: none;
+        }
+        &:active {
+            border-radius: 10px;
+        }
+
+        &:not(active):hover {
+            color: white;
+            background-color: #e956208a;
+            border-radius: 10px;
+        }
     }
 }

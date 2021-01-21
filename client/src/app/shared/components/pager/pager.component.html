@@ -4,6 +4,7 @@ previousText="&lsaquo;"
 nextText="&rsaquo;"
 firstText="&laquo;" 
 lastText="&raquo;" 
+[ngModel]="pageNumber"
 [itemsPerPage]="pageSize" 
 (pageChanged)="onPagerChange($event)">
 </pagination>
